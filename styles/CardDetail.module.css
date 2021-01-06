@@ -61,11 +61,11 @@
   margin: 20px 250px;
 }
 
-a {
+/* a {
   color: black;
   text-align: end;
   align-content: flex-end;
-}
+} */
 .box .content .back {
   justify-content: center;
   margin-left: 340px;
@@ -85,10 +85,10 @@ a {
   font-weight: 800;
 }
 
-span:hover {
+/* span:hover {
   transform: scale(1.2);
   text-decoration: underline;
-}
+} */
 
 @media (max-width: 768px) {
   .box {

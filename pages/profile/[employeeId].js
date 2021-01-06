@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { getEmployeeById, employees } from "../../constants/endpoints";
 
-import detail from "../styles/CardDetail.module.css";
+import detail from "../../styles/CardDetail.module.css";
 
 import { AiTwotoneMail, AiFillShop } from "react-icons/ai";
 import { FcAbout } from "react-icons/fc";
@@ -72,8 +72,10 @@ function EmployeeDetail(props) {
             </a>
           </p>
           <p className={detail.back}>
-            <Link to="/profiles">
-              <AiOutlineArrowLeft size="2em" />
+            <Link href="/profiles">
+              <a>
+                <AiOutlineArrowLeft size="2em" />
+              </a>
             </Link>
           </p>
         </div>
@@ -84,10 +86,9 @@ function EmployeeDetail(props) {
 
 export const getStaticProps = async (context) => {
   let { data } = await axios(getEmployeeById + context.params.employeeId);
-  data = data.data;
-
+  data = data.data[0];
   return {
-    props: { employee: [...data] },
+    props: { employee: { ...data } },
   };
 };
 
