@@ -1,5 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 import { getEmployeeById, employees } from "../../constants/endpoints";
 
@@ -14,6 +15,9 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 
 function EmployeeDetail(props) {
   const employee = props.employee;
+  const router = useRouter();
+  //   console.log(router);
+
   return (
     <>
       <div className={detail.box} key={employee.employeeId}>
@@ -92,7 +96,7 @@ export const getStaticProps = async (context) => {
   };
 };
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   let { data } = await axios(employees);
   data = data.data;
   let paths = data.map((employee) => ({
@@ -100,10 +104,11 @@ export async function getStaticPaths() {
       employeeId: `${employee.employeeId}`,
     },
   }));
+  //   console.log(paths);
   return {
     paths,
-    fallback: false, // See the "fallback" section below
+    fallback: true,
   };
-}
+};
 
 export default EmployeeDetail;
