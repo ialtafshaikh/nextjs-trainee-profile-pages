@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { getEmployeeById, employees } from "../../constants/endpoints";
 
-// import detail from "../styles/CardDetail.module.css";
+import detail from "../styles/CardDetail.module.css";
 
 import { AiTwotoneMail, AiFillShop } from "react-icons/ai";
 import { FcAbout } from "react-icons/fc";
