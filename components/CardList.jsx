@@ -19,6 +19,7 @@ export default class CardList extends Component {
         return response.json();
       })
       .then((data) => {
+        console.log(data);
         this.setState({ employees: data.data });
       });
   };

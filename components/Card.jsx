@@ -39,6 +39,18 @@ export default class Card extends Component {
             </p>
           </div>
         </div>
+        <style jsx>{`
+          a {
+            text-decoration: none;
+          }
+          h1 {
+            margin-bottom: 10px;
+            text-align: center;
+          }
+          p {
+            text-align: center;
+          }
+        `}</style>
       </>
     );
   }
