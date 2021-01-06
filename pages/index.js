@@ -1,4 +1,5 @@
 import Head from "next/head";
+import indexStyle from "../styles/Index.module.css";
 
 export default function Home() {
   return (
@@ -7,6 +8,12 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className={indexStyle.divIndex}>
+        <h1 className={indexStyle.indexh1}>NexT LeVel</h1>
+        <p className={indexStyle.indexp}>
+          Because, what's Inside, get's a Count...!!!{" "}
+        </p>
+      </div>
     </div>
   );
 }
