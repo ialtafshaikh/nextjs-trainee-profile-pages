@@ -69,6 +69,16 @@ function AddEmployeeForm() {
           </button>
         </div>
       </form>
+      <style jsx>{`
+        button {
+          font-size: 20px;
+          align-items: center;
+          padding: 10px;
+          color: white;
+          background-color: black;
+          border: none;
+        }
+      `}</style>
     </div>
   );
 }

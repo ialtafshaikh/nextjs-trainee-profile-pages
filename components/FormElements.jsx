@@ -12,7 +12,7 @@ export default function FormElements() {
               name="firstName"
               className={FormElementStyles.inputField}
               required
-              placeholder="First Name"
+              placeholder="First Name*"
             />
           </div>
           <br />
@@ -22,7 +22,7 @@ export default function FormElements() {
               name="lastName"
               className={FormElementStyles.inputField}
               required
-              placeholder="Last Name"
+              placeholder="Last Name*"
             />
           </div>
           <br />
@@ -32,7 +32,7 @@ export default function FormElements() {
               name="company"
               className={FormElementStyles.inputField}
               required
-              placeholder="Company"
+              placeholder="Company*"
             />
           </div>
           <br />
@@ -42,7 +42,7 @@ export default function FormElements() {
               name="email"
               className={FormElementStyles.inputField}
               required
-              placeholder="Email"
+              placeholder="Email*"
             />
           </div>
           <br />
@@ -52,12 +52,12 @@ export default function FormElements() {
               name="contact"
               className={FormElementStyles.inputField}
               required
-              placeholder="Contact"
+              placeholder="Contact*"
             />
           </div>
           <br />
           <div>
-            <label htmlFor="imageUrl">ProfilePic:</label>
+            <label htmlFor="imageUrl">ProfilePic*:</label>
             <input
               type="file"
               name="imageUrl"
