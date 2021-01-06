@@ -9,15 +9,17 @@ function Card(props) {
       <div className={cardStyle.box}>
         <div>
           <Link href={"/profile/" + props.employee.employeeId}>
-            <img
-              src={props.employee.imageUrl}
-              alt={props.employee.firstName}
-              className={cardStyle.imgWidth}
-            />
-            <h1>
-              {this.props.employee.firstName} {this.props.employee.lastName}
-            </h1>
-            <p className={cardStyle.title}>{props.employee.company}</p>
+            <a>
+              <img
+                src={props.employee.imageUrl}
+                alt={props.employee.firstName}
+                className={cardStyle.imgWidth}
+              />
+              <h1>
+                {props.employee.firstName} {props.employee.lastName}
+              </h1>
+              <p className={cardStyle.title}>{props.employee.company}</p>
+            </a>
           </Link>
         </div>
         <div className={cardStyle.linkStyle}>
