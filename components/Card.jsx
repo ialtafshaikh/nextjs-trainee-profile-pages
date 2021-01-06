@@ -8,7 +8,7 @@ function Card(props) {
     <>
       <div className={cardStyle.box}>
         <div>
-          <Link to={"/profile/" + props.employee.employeeId}>
+          <Link href={"/profile/" + props.employee.employeeId}>
             <img
               src={props.employee.imageUrl}
               alt={props.employee.firstName}
