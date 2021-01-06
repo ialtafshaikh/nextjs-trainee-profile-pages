@@ -16,9 +16,10 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 function EmployeeDetail(props) {
   const employee = props.employee;
   const router = useRouter();
-  //   console.log(router);
 
-  return (
+  return router.isFallback ? (
+    <p>Loading..</p>
+  ) : (
     <>
       <div className={detail.box} key={employee.employeeId}>
         <div className={detail.details}>
@@ -101,10 +102,10 @@ export const getStaticPaths = async () => {
   data = data.data;
   let paths = data.map((employee) => ({
     params: {
-      employeeId: `${employee.employeeId}`,
+      employeeId: employee.employeeId,
     },
   }));
-  //   console.log(paths);
+
   return {
     paths,
     fallback: true,
