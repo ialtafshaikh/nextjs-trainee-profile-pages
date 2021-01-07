@@ -6,7 +6,7 @@ export default function Custom404() {
       <div className="pageNotFound">
         <Image
           src="https://www.singlegrain.com/wp-content/uploads/2015/06/eric7.png"
-          alt="404 page not found"
+          alt="404 page Not found"
           layout="fill"
         />
       </div>
