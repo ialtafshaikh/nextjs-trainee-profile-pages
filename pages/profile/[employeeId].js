@@ -1,5 +1,6 @@
 import axios from "axios";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import { getEmployeeById, employees } from "../../constants/endpoints";
@@ -24,7 +25,12 @@ function EmployeeDetail(props) {
       <div className={detail.box} key={employee.employeeId}>
         <div className={detail.details}>
           <div>
-            <img src={employee.imageUrl} alt={employee.firstName} />
+            <Image
+              src={employee.imageUrl}
+              alt={employee.firstName}
+              width={200}
+              height={200}
+            />
           </div>
           <div>
             <br />
