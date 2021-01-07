@@ -7,6 +7,7 @@ export default function Home() {
       <Head>
         <title>Trainee Profiles</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={indexStyle.divIndex}>
         <h1 className={indexStyle.indexh1}>NexT LeVel</h1>
