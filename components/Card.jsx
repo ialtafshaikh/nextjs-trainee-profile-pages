@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import cardStyle from "../styles/Card.module.css";
 import { FaGithub, FaLinkedin, FaGlobe } from "react-icons/fa";
@@ -10,10 +11,12 @@ function Card(props) {
         <div>
           <Link href={"/profile/" + props.employee.employeeId}>
             <a>
-              <img
+              <Image
                 src={props.employee.imageUrl}
                 alt={props.employee.firstName}
                 className={cardStyle.imgWidth}
+                width={250}
+                height={250}
               />
               <h1>
                 {props.employee.firstName} {props.employee.lastName}
